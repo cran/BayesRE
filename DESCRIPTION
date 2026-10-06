@@ -1,0 +1,37 @@
+Package: BayesRE
+Type: Package
+Title: Bayesian Multiple Linear Regression Estimation for Crop Yield
+Version: 0.1.0
+Authors@R: c(person("Prakash","Kumar",role=c("aut","cre"),email="prakash289111@gmail.com"),
+             person(c("Himadri","Sekhar"),"Roy",role="aut"),
+             person(c("Ranjit","Kumar"),"Paul",role="aut"),
+             person("Md.","Yeasin",role="aut"),
+             person("Neeraj","Budhlakoti",role="aut"),
+             person(c("Sunil","Kumar"),"Yadav",role="aut"),
+             person(c("Amrit","Kumar"),"Paul",role="aut"))
+Description: Implements Bayesian multiple linear regression models for estimating
+    crop yield response to climatic variables. Posterior predictions and regional
+    sensitivity coefficients are returned and can be visualised with built-in
+    plotting utilities. Methods are based on Stan (Carpenter et al. (2017)
+    <doi:10.18637/jss.v076.i01>) and Bayesian workflow described in Gelman et al.
+    (2013, ISBN:9781439840955). 
+Depends: R (>= 4.0)
+License: MIT + file LICENSE
+Imports: rstan, ggplot2, bayesplot, stats
+Encoding: UTF-8
+LazyData: true
+Suggests: testthat (>= 3.0.0), rmarkdown
+Config/roxygen2/version: 8.1.0
+RoxygenNote: 7.3.3
+NeedsCompilation: no
+Packaged: 2026-09-25 11:21:46 UTC; iasri
+Author: Prakash Kumar [aut, cre],
+  Himadri Sekhar Roy [aut],
+  Ranjit Kumar Paul [aut],
+  Md. Yeasin [aut],
+  Neeraj Budhlakoti [aut],
+  Sunil Kumar Yadav [aut],
+  Amrit Kumar Paul [aut]
+Maintainer: Prakash Kumar <prakash289111@gmail.com>
+Repository: CRAN
+Date/Publication: 2026-10-06 07:50:09 UTC

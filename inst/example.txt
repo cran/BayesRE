@@ -1,0 +1,46 @@
+library(BayesRE)
+
+data(bayesre_example)
+
+fit <- fit_bayesre(bayesre_example)
+
+pred <- predict_bayesre(fit, bayesre_example)
+
+compute_metrics(pred)
+
+plot_diagnostics(fit)
+
+# Heatmap
+plot_response_surface(fit)
+
+# With data overlay
+plot_response_surface_data(fit, bayesre_example)
+# Just plot
+plot_observed_vs_predicted(pred)
+
+# Plot and save
+plot_observed_vs_predicted(pred, save = TRUE)
+
+library(BayesRE)
+library(readr)
+
+data <- read_csv("Rice_yield_loc_year.csv")
+
+fit <- fit_bayesre(data)
+
+pred <- predict_bayesre(fit, data)
+
+compute_metrics(pred)
+
+plot_diagnostics(fit)
+# Just plot
+plot_observed_vs_predicted(pred)
+
+# Plot and save
+plot_observed_vs_predicted(pred, save = TRUE)
+
+# Heatmap
+plot_response_surface(fit)
+
+# With data overlay
+plot_response_surface_data(fit, bayesre_example)

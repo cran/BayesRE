@@ -1,0 +1,19 @@
+set.seed(123)
+
+N <- 60
+
+Temp <- rnorm(N, mean = 28, sd = 2)
+Precip <- rnorm(N, mean = 120, sd = 25)
+
+Yield <- 3 + 0.25*Temp + 0.015*Precip - 0.005*(Temp-28)^2 +
+  rnorm(N, 0, 0.4)
+
+bayesre_example <- data.frame(
+  Location = rep(paste0("Loc",1:3), each = 26),
+  Year = rep(2001:2030, times = 5)[1:N],
+  Yield = Yield,
+  Temp = Temp,
+  Precip = Precip
+)
+
+usethis::use_data(bayesre_example, overwrite = TRUE)
